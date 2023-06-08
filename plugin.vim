@@ -9,4 +9,4 @@ function! SendSelectionToPython() range
   echo output
 endfunction
 
-xnoremap <silent> , :<C-u>call SendSelectionToPython()<CR>
+xnoremap <silent> ,s :<C-u>call SendSelectionToPython()<CR>
