@@ -1,9 +1,1 @@
- let cmd = "python ~/correct_text_oneshot.py "
-  for line in selection
-    let cmd .= shellescape(line) . " "
-  endfor
-  let output = system(cmd)
-  echo output
-endfunction
-
-xnoremap <silent> <leader>a :<C-u>call SendSelectionToPython()<CR>
+xnoremap <silent> <leader>s :<C-u>call send_selection_to_python#Send()<CR>
