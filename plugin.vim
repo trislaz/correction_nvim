@@ -6,4 +6,4 @@
   echo output
 endfunction
 
-xnoremap <silent> <leader>s :<C-u>call SendSelectionToPython()<CR>
+xnoremap <silent> <leader>a :<C-u>call SendSelectionToPython()<CR>
