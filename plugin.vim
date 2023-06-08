@@ -1,10 +1,12 @@
 function! SendSelectionToPython() range
+  echo "using correction script"
   let selection = getline(a:firstline, a:lastline)
-  let cmd = "python3 ~/correct_text_oneshot.py "
+  let cmd = "python ~/correct_text_oneshot.py "
   for line in selection
     let cmd .= shellescape(line) . " "
   endfor
-  call system(cmd)
+  let output = system(cmd)
+  echo output
 endfunction
 
 xnoremap <silent> <,>s :<C-u>call SendSelectionToPython()<CR>
